@@ -16,28 +16,28 @@
       </div>
 
       <div class="grid grid-cols-4 gap-3">
-        <button class="col-span-2 py-4">C</button>
-        <button class="py-4">DEL</button>
-        <button class="py-4">÷</button>
+        <button onclick="clearDisplay()" class="col-span-2 py-4">C</button>
+        <button onclick="deleteLast()" class="py-4">DEL</button>
+        <button onclick="appendOperator('/')" class="py-4">÷</button>
 
-        <button class="py-4">7</button>
-        <button class="py-4">8</button>
-        <button class="py-4">9</button>
-        <button class="py-4">×</button>
+        <button onclick="appendNumber('7')" class="py-4">7</button>
+        <button onclick="appendNumber('8')" class="py-4">8</button>
+        <button onclick="appendNumber('9')" class="py-4">9</button>
+        <button onclick="appendOperator('*')" class="py-4">×</button>
 
-        <button class="py-4">4</button>
-        <button class="py-4">5</button>
-        <button class="py-4">6</button>
-        <button class="py-4">−</button>
+        <button onclick="appendNumber('4')" class="py-4">4</button>
+        <button onclick="appendNumber('5')" class="py-4">5</button>
+        <button onclick="appendNumber('6')" class="py-4">6</button>
+        <button onclick="appendOperator('-')" class="py-4">−</button>
 
-        <button class="py-4">1</button>
-        <button class="py-4">2</button>
-        <button class="py-4">3</button>
-        <button class="py-4">+</button>
+        <button onclick="appendNumber('1')" class="py-4">1</button>
+        <button onclick="appendNumber('2')" class="py-4">2</button>
+        <button onclick="appendNumber('3')" class="py-4">3</button>
+        <button onclick="appendOperator('+')" class="py-4">+</button>
 
-        <button class="col-span-2 py-4">0</button>
-        <button>.</button>
-        <button>=</button>
+        <button onclick="appendNumber('0')" class="col-span-2 py-4">0</button>
+        <button onclick="appendNumber('.')" class="py-4">.</button>
+        <button onclick="calculate()" class="py-4">=</button>
       </div>
     </div>
   </body>
