@@ -1,6 +1,7 @@
 let currentInput = "0";
 let previousInput = "";
 let operator = null;
+let firstOperand = null;
 
 function updateDisplay() {
   document.getElementById("display").textContent = currentInput;
@@ -22,6 +23,7 @@ function appendOperator(op) {
   if (operator !== null) {
     calculate();
   }
+  firstOperand = currentInput;
   operator = op;
   previousInput = currentInput + " " + getOperatorSymbol(op);
   currentInput = "0";
@@ -59,10 +61,16 @@ function calculate() {
       result = prev / current;
       break;
   }
-
+  previousInput =
+    firstOperand +
+    " " +
+    getOperatorSymbol(operator) +
+    " " +
+    currentInput +
+    " =";
   currentInput = result.toString();
-  previousInput = "";
   operator = null;
+  firstOperand = null;
   updateDisplay();
 }
 
@@ -70,6 +78,7 @@ function clearDisplay() {
   currentInput = "0";
   previousInput = "";
   operator = null;
+  firstOperand = null;
   updateDisplay();
 }
 
